@@ -55,18 +55,10 @@ public class HelloWorldController {
     }
 
 
-    @GetMapping   ("/test") public String testBody_Get   (@RequestBody String body) {
-        return testBody(body, "GET"   );
-    }
-    @PostMapping  ("/test") public String testBody_Post  (@RequestBody String body) {
-        return testBody(body, "POST"  );
-    }
-    @PutMapping   ("/test") public String testBody_Put   (@RequestBody String body) {
-        return testBody(body, "PUT"   );
-    }
-    @DeleteMapping("/test") public String testBody_Delete(@RequestBody String body) {
-        return testBody(body, "DELETE");
-    }
+    @GetMapping   ("/test") public String testBody_Get   (@RequestBody String body) { return testBody(body, "GET"   ); }
+    @PostMapping  ("/test") public String testBody_Post  (@RequestBody String body) { return testBody(body, "POST"  ); }
+    @PutMapping   ("/test") public String testBody_Put   (@RequestBody String body) { return testBody(body, "PUT"   ); }
+    @DeleteMapping("/test") public String testBody_Delete(@RequestBody String body) { return testBody(body, "DELETE"); }
     @PatchMapping ("/test") public String testBody_Patch (@RequestBody String body) { return testBody(body, "PATCH" ); }
 
     public String testBody(String body, String method) {
